@@ -8,14 +8,17 @@
 5. Testen
 6. Quellenangaben
 
-## Einleitung
+## 1. Einleitung
+- Client wird mit Ubuntu aufgesetzt
+- Beim Aufstarten des Ubuntu Clients wird ein Samba Dienst gestartet und ein Samba Share zur Verfügung gestellt
+- Kann: "bei jedem Start wird das vagrant-logfile automatisch in einen Samba-Share kopiert, um den Status von vagrant schnell überprüfen zu können."
 
-## Grafische Übersicht
+## 2. Grafische Übersicht
 
-## Alles Relevante wird beschrieben
+## 3. Alles Relevante wird beschrieben
 
-## Korrekteheit der Angaben
+## 4. Korrekteheit der Angaben
 
-## Testen
+## 5. Testen
 
-## Quellenangaben
+## 6. Quellenangaben

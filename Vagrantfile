@@ -6,8 +6,8 @@
 # backwards compatibility). Please don't change it unless you know what
 # you're doing.
 Vagrant.configure("2") do |config|
-  config.vm.box = "puphpet/ubuntu1404-x64"
-  config.vm.network "public_network", ip: "192.168.56.20", bridge: "eth1"
+  config.vm.box = "ubuntu/xenial64"
+  config.vm.network "public_network", ip: "192.168.56.20", bridge: "Intel(R) Dual Band Wireless-AC 7265"
   config.vm.hostname = "Samba-Client"
   config.vm.define "Samba-Client"
   # The most common configuration options are documented and commented below.
@@ -16,7 +16,6 @@ Vagrant.configure("2") do |config|
 
   # Every Vagrant development environment requires a box. You can search for
   # boxes at https://vagrantcloud.com/search.
-  config.vm.box = "puphpet/ubuntu1404-x64"
 
   # Disable automatic box update checking. If you disable this, then
   # boxes will only be checked for updates when the user runs

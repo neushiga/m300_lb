@@ -1,4 +1,4 @@
-# Dokumentation 
+# Samba Dokumentation 
 
 ## Inhaltsverzeichnis
 1. Einleitung
@@ -16,6 +16,17 @@
 ## 2. Grafische Übersicht
 
 ## 3. Alles Relevante wird beschrieben
+Vagrant File erstellen
+>vagrant init
+
+Vm erstellen
+Foto vom Vagrant file contos/07
+Testen mit vagrant up
+![] (C:\Users\neush\MeinLokalesRepository\m300_lb\lb02\Screenshot\vagrant_up.JPG])
+
+Verbindung via SSH
+vagrant ssh
+
 
 ## 4. Korrekteheit der Angaben
 

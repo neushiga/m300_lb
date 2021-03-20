@@ -71,5 +71,10 @@ Vagrant.configure("2") do |config|
    config.vm.provision "shell", inline: <<-SHELL
      apt-get update
      apt-get install -y samba
+     
+     mkdir /home/vagrant/tshare
+     sudo nano smb.conf
+
+
    SHELL
 end

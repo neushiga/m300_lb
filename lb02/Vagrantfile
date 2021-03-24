@@ -78,7 +78,5 @@ Vagrant.configure("2") do |config|
      sudo mv /etc/samba/smb.conf /etc/samba/smbold.conf
      sudo wget -P /etc/samba/ https://raw.githubusercontent.com/neushiga/m300_lb/main/lb02/smb.conf
 
-
-
    SHELL
 end

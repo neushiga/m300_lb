@@ -30,12 +30,12 @@ vagrant init
 ```
 
 Mit ```vagrant up```  kann man versuechen, die VM zu starten. Dabei wird das Ganze durchgelaufen:
-![](Screenshot\vagrant_up.JPG) 
+![Vagrant Up](Screenshot\vagrant_up.JPG) 
 
 
 Oder man kann spontan im VirtualBox nachsehen, ob es diesen generiert hat:
 
-![](Screenshot\VM.JPG)
+![VM](Screenshot\VM.JPG)
 
 
 Die Verbindung via SSH zum Github wird wie folgt aufgebaut:
@@ -106,14 +106,14 @@ systemctl status smbd
 
 Hier grün zeigt es an, dass der Service läuft. 
 
-![](Screenshot\Status_smbd.JPG) 
+![Status smbd Service](Screenshot\Status_smbd.JPG) 
 
 Wir gehen in das Verzeichnis und /etc/samba und sehen das smb.conf File. 
 ```
 cd /etc/samba
 ```
 
-![Config File](Screenshot\smbconfig_file.JPG) 
+![Smbconfig File](Screenshot\smbconfig_file.JPG) 
 
 
 Wir nennen das File um zu "smbold.conf"
@@ -124,7 +124,7 @@ sudo mv /etc/samba/smb.conf /etc/samba/smbold.conf
 
 Um zu sehen, ob es wirklich geändert hat, kann ich dies mit dem Befehl **ls** oder **ll** überprüfen.
 
-![smbold](:\Users\neush\MeinLokalesRepository\m300_lb\lb02\Screenshot\smbold.JPG) 
+![smbold](Screenshot\smbold.JPG) 
 
 
 Wir erstellen mit **mkdir** einen neuen Ordner im Verzeichnis /home/vagrant/.
@@ -134,7 +134,7 @@ mkdir /home/vagrant/tshare
 
 Wenn wir im Verzeichnis /home/vagrant/tshare **ll** eingeben, sehen wir den **root** als den Standarduser. 
 
-![root](\Screenshot\root.JPG) 
+![root](Screenshot\root.JPG) 
 
 Wir wollen aber vagrant als den Standarduser und ändern es mit **chown**.
 ```bash Codiger Code ist hier gecoded
@@ -158,20 +158,20 @@ sudo systemctl restart smbd
 ```
 
 ## 3. Korrekteheit der Angaben
-![](Screenshot\GrafischeÜbersicht.JPG) 
+![Korrekte Angaben](Screenshot\KorrekteAngaben.JPG) 
 
 ## 4. Testen
 Testen können wir es in dem wir im Windows Explorer \\192.168.0.20\eingeben. Der tshare sollte erscheinen und in diesem tshare können wir einen Test Folder erstellen. Wenn wir anschliessend im Samba-Client via ssh Verbindung im tshare Verzeichnis nachsehen, sollte dieser ersichtlich sein, wenn wir **ll** eingeben.
 
-![](Screenshot\tshare.JPG) 
+![tshare](Screenshot\tshare.JPG) 
 
 Wir können dem Share auch einen Laufwerkbuchstaben vergeben.
 
-![](Screenshot\tshareLaufwerk.JPG) 
+![Laufwerk tshare](Screenshot\tshareLaufwerk.JPG) 
 
 ## 5. Grafische Darstellung
 
-![](Screenshot\tshare.JPG) 
+![tshare](Screenshot\tshare.JPG) 
 
 ## 6. Quellenangaben
 

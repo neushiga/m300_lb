@@ -113,7 +113,7 @@ Wir gehen in das Verzeichnis und /etc/samba und sehen das smb.conf File.
 cd /etc/samba
 ```
 
-![](Screenshot\smbconfig_file.JPG) 
+![Config File](Screenshot\smbconfig_file.JPG) 
 
 
 Wir nennen das File um zu "smbold.conf"
@@ -124,7 +124,7 @@ sudo mv /etc/samba/smb.conf /etc/samba/smbold.conf
 
 Um zu sehen, ob es wirklich geändert hat, kann ich dies mit dem Befehl **ls** oder **ll** überprüfen.
 
-![](:\Users\neush\MeinLokalesRepository\m300_lb\lb02\Screenshot\smbold.JPG) 
+![smbold](:\Users\neush\MeinLokalesRepository\m300_lb\lb02\Screenshot\smbold.JPG) 
 
 
 Wir erstellen mit **mkdir** einen neuen Ordner im Verzeichnis /home/vagrant/.
@@ -134,7 +134,7 @@ mkdir /home/vagrant/tshare
 
 Wenn wir im Verzeichnis /home/vagrant/tshare **ll** eingeben, sehen wir den **root** als den Standarduser. 
 
-![](Screenshot\root.JPG) 
+![root](\Screenshot\root.JPG) 
 
 Wir wollen aber vagrant als den Standarduser und ändern es mit **chown**.
 ```bash Codiger Code ist hier gecoded

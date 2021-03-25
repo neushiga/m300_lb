@@ -124,7 +124,7 @@ sudo mv /etc/samba/smb.conf /etc/samba/smbold.conf
 
 Um zu sehen, ob es wirklich geändert hat, kann ich dies mit dem Befehl **ls** oder **ll** überprüfen.
 
-![](\Screenshot\smbold.JPG) 
+![](:\Users\neush\MeinLokalesRepository\m300_lb\lb02\Screenshot\smbold.JPG) 
 
 
 Wir erstellen mit **mkdir** einen neuen Ordner im Verzeichnis /home/vagrant/.

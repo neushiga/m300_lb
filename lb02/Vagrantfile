@@ -7,7 +7,7 @@
 # you're doing.
 Vagrant.configure("2") do |config|
   config.vm.box = "ubuntu/xenial64"
-  config.vm.network "public_network", ip: "192.168.56.20", bridge: "Intel(R) Dual Band Wireless-AC 7265"
+  config.vm.network "public_network", ip: "192.168.0.20", bridge: "Intel(R) Dual Band Wireless-AC 7265"
   config.vm.hostname = "Samba-Client"
   config.vm.define "Samba-Client"
   # The most common configuration options are documented and commented below.

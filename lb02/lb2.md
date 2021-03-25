@@ -61,7 +61,7 @@ Vagrant.configure("2") do |config|
 
  Hier definiere ich das Network auf public, IP-Adresse, Bridge und den Hostnamen. Beim **.define** habe ich auch den Hostnamen eingegeben.
  ```bash Codiger Code ist hier gecoded
-    config.vm.network "public_network", ip: "192.168.56.20", 
+    config.vm.network "public_network", ip: "192.168.0.20", 
     bridge: "Intel(R) Dual Band Wireless-AC 7265"
     config.vm.hostname = "Samba-Client"
     config.vm.define "Samba-Client"

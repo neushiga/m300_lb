@@ -35,7 +35,7 @@ Mit ```vagrant up```  kann man versuechen, die VM zu starten. Dabei wird das Gan
 
 Oder man kann spontan im VirtualBox nachsehen, ob es diesen generiert hat:
 
-![VM](Screenshot\VM.JPG)
+![VM](VM.JPG)
 
 
 Die Verbindung via SSH zum Github wird wie folgt aufgebaut:
@@ -126,13 +126,28 @@ Um zu sehen, ob es wirklich geändert hat, kann ich dies mit dem Befehl **ls** o
 
 ![smbold](Screenshot\smbold.JPG) 
 
+smb.conf File erstellen
+```bash Codiger Code ist hier gecoded
+sudo nano /etc/samba/smb.conf
+```
 
-Wir erstellen mit **mkdir** einen neuen Ordner im Verzeichnis /home/vagrant/.
+Folgendes einfügen:
+
+![Smb Config Datei](Screenshot\smbconfigdatei.JPG) 
+
+
+Wir erstellen mit **mkdir** einen neuen Ordner im Verzeichnis /home/vagrant/
 ```bash Codiger Code ist hier gecoded
 mkdir /home/vagrant/tshare
 ```
 
 Wenn wir im Verzeichnis /home/vagrant/tshare **ll** eingeben, sehen wir den **root** als den Standarduser. 
+
+Den Samba Dienst neustarten und anschliessend den Status nochmals überprüefen vom Dienst.
+```bash Codiger Code ist hier gecoded
+sudo systemctl restart smbd
+```
+
 
 ![root](Screenshot\root.JPG) 
 

@@ -5,12 +5,13 @@
 2. Code Beschreibung
 3. Korrekteheit der Angaben
 4. Testen
-5. Quellenangaben
+5. Grafische Darstellung
+6. Quellenangaben
 
 ## 1. Einleitung
 - Client wird mit Ubuntu aufgesetzt
 - Beim Aufstarten des Ubuntu Clients wird ein Samba Dienst gestartet und ein Samba Share zur Verfügung gestellt
-- Kann: "bei jedem Start wird das vagrant-logfile automatisch in einen Samba-Share kopiert, um den Status von vagrant schnell überprüfen zu können."
+
 
 
 ## 2. Code Beschreibung
@@ -140,13 +141,39 @@ Wir wollen aber vagrant als den Standarduser und ändern es mit **chown**.
 sudo chown vagrant:vagrant /home/vagrant/tshare
 ```
 
+### Passwort automatisieren
+
+Um das Passwort zu automatisieren erstellen wir zwei Variabeln $user und $passwd. Beide haben "vagrant" abgespeichert. Um eine Variable zu definieren, braucht es kein Dollar-Zeichen. Man muss lediglich nur alles ohne Abstand schreiben. Beim weiteren Gebrauch der Variable muss man jedoch das Dollar-Zeichen davor setzen.
+Bei der letzten Zeile wird der Service smbd neugestartet.
+
+**-a** = User hinzufügen
+**-s** = stdin für die Passwortabfrage benutzen
+
+```bash Codiger Code ist hier gecoded
+user=vagrant
+passwd=vagrant
+echo -ne "$passwd\n$passwd\n" | sudo smbpasswd -a -s $user
+  
+sudo systemctl restart smbd
+```
+
 ## 3. Korrekteheit der Angaben
 ![](Screenshot\GrafischeÜbersicht.JPG) 
 
 ## 4. Testen
- 
+Testen können wir es in dem wir im Windows Explorer \\192.168.0.20\eingeben. Der tshare sollte erscheinen und in diesem tshare können wir einen Test Folder erstellen. Wenn wir anschliessend im Samba-Client via ssh Verbindung im tshare Verzeichnis nachsehen, sollte dieser ersichtlich sein, wenn wir **ll** eingeben.
 
-## 5. Quellenangaben
+![](Screenshot\tshare.JPG) 
+
+Wir können dem Share auch einen Laufwerkbuchstaben vergeben.
+
+![](Screenshot\tshareLaufwerk.JPG) 
+
+## 5. Grafische Darstellung
+
+![](Screenshot\tshare.JPG) 
+
+## 6. Quellenangaben
 
 ### ubuntu/xenial64 Box Webseite 
 https://app.vagrantup.com/boxes/search

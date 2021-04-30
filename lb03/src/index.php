@@ -1,3 +1,3 @@
 <?php
 
-echo "Hello from Ndocker";
+echo "Hello from the Neushigas docker container. It works!!!";
